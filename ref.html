@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+      }
+      html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-size: 12px;
+        font-family: "Open Sans", sans-serif;
+      }
+    </style>
+    <script src="./ref.js"></script>
+    <script>
+      var fontLoaded = false;
+      var WebFontConfig = {
+        google: {
+          families: ["Open Sans"]
+        },
+        active: function() {
+          fontLoaded = true;
+        }
+      };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="./render.js"></script>
+  </head>
+  <body>
+    <div id="canvas"></div>
+  </body>
+</html>
